@@ -3,7 +3,6 @@ DATA='mnist'
 DATADIR='../data/'
 SOLVER='rk4'
 KE=0.01
-JF=0.01
 STEPSIZE=0.25
 SAVE=../experiments/$DATA/example/
 
@@ -18,6 +17,5 @@ python -m torch.distributed.launch \
   --save $SAVE \
   --solver $SOLVER  --step_size $STEPSIZE \
   --kinetic-energy $KE \
-  --jacobian-norm2 $JF \
   --alpha 1e-5 \
   --test_solver dopri5 --test_atol 1e-5 --test_rtol 1e-5 \
