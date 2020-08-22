@@ -49,6 +49,8 @@ class CNF(nn.Module):
 
         # Refresh the odefunc statistics.
         self.odefunc.before_odeint()
+        import pdb
+        pdb.set_trace()
 
         if self.training:
             state_t = odeint(

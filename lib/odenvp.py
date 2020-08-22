@@ -117,8 +117,6 @@ class ODENVP(nn.Module):
         else:
             if self.squeeze_first:
                 x = squeeze(x)
-                import pdb
-                pdb.set_trace()
             return self._logdensity(x, logpx, reg_states)
 
     def _logdensity(self, x, logpx=None, reg_states=tuple()):
